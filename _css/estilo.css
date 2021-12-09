@@ -1,0 +1,266 @@
+@charset "utf-8";
+
+@font-face{
+	font-family:'fontelogo';
+	src: url("../_fonts/bubblegum-sans-regular .otf");
+}
+p {text-align:justify;
+text-indent:50px;
+}
+a{
+	color:blue;
+	text-decoration:none;
+	
+}
+a:hover{
+	text-decoration:underline;
+}
+body{
+background-color:#dddddd;
+color:black;
+font-family:arial,sans-serif;
+
+}
+
+/*formataçao interface tudo aquilo dentro da div */
+div#interface{
+	width:900px;
+	background-color:white;
+	margin:-20px auto 0px auto;
+	box-shadow:0px 0px 10px black;
+	padding:10px;
+}
+/*oculos pqueno parte cima*/
+header#cabecalho img#icone{
+	position:absolute;
+	left:1230px;
+	top:40px;
+}
+/*para trazer uma imagen de fora para css usa url("pasta onde esta imagem")
+font-size: 30px;= tamanho da fonte
+
+
+*/
+header#cabecalho{
+	border-bottom: 1px #606060 solid;
+	height:180px;
+	background:url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+}
+header#cabecalho h1 {
+font-family: 'fontelogo', sans-serif;
+font-size: 30px;
+color: #606060;
+text-shadow:1px 1px 1px rgba(0,0,0,.6);
+padding:0px;
+margin-bottom:0px;
+}
+header#cabecalho h2{
+	font-family: arial, sans-serif;
+	font-size:15pt;
+	color:#888888;
+    padding:0px;
+	margin-top:8px;
+}
+
+/*formatçao foto homen mulher*/
+/*posicao relative para deixar legendas dentro do box nao vazar....width 100% e height100% ocupa todo espaço .....padding serve ocupar todo espaço de fundo da imagem .....	box-sizing:border-box;serve para alinha fundo da cor da imagem.....opacity:0;serve para apagar legenda e deixar somente mause passar por cima.figure.foto-legenda:hover figcaption
+*/
+figure.foto-legenda{
+	position:relative;
+border:8px solid black;
+box-shadow:1px 1px 4px black;}
+
+	figure.foto-legenda img{
+		width:100%;
+		height:100%;
+}
+figure.foto-legenda figcaption {
+	opacity:0;
+	position:absolute;
+	top:0px;
+	background-color:rgba(0,0,0,.4);
+	color:white;
+	width:100%;
+	height:100%;
+	padding:10px;
+	box-sizing:border-box;
+	transition:opacity 1s;
+}
+figure.foto-legenda:hover figcaption{
+	
+	opacity:1;
+}
+/*formatacao menu  ...deixar letras maisculastext-transform:uppercase; */
+nav#menu ul{
+	
+	list-style:none;
+	text-transform:uppercase;
+	position:absolute;
+	top:-20px;
+	left:770px;
+}
+ 
+nav#menu li{
+	display:inline-block;
+	background-color:#dddddd;
+	padding:10px;
+	margin:2px;
+	transition:background-color 1s;
+}
+nav#menu li:hover{
+	background-color:#606060;
+}
+nav#menu h1{
+	display:none;
+}
+nav#menu a{
+	color:white;
+	text-decoration:none;
+}
+
+nav#menu a:hover{
+	color:black;
+	text-decoration:underline;
+	
+}
+/*trabalhando article do corpo*/
+/*na mesma section pode ter varios article*/
+header#cabecalho-artigo h1{
+	font-family:'fontelogo', sans-serif;
+	color:#888888;
+	font-size:22pt;
+	margin-bottom:0px;
+	margin-top:0px;
+	text-shadow:2px 2px 2px black;
+	
+}
+.lado{
+	text-align:right;
+}
+
+header#cabecalho-artigo h3{
+	font-size:12pt;
+	font-family:arial, sans-serif;
+	color:#808080;
+	margin:0px;
+	
+}
+	
+
+header#cabecalho-artigo h4{
+	color:#cecece;
+	font-size:8pt;
+	font-family:arial, sans-serif;
+	
+}
+
+
+article#noticia-principal h2{
+	font-size:14pt;
+	color:#606060;
+	background-color:#dddddd;
+	padding:5px 0px 5px 10px;   
+	margin:10px 0px 10px 0px;
+	
+	
+}
+
+	
+	
+
+/*trabalhando o corpo do site*/
+section#corpo{
+	display:block;
+	width:490px;
+	float:left;
+	border-right:1px solid black;
+	padding:15px;
+}
+/*tabela  border-spacing:0px; serve para tirar ou aumentar espaço da borda*/
+
+table#tabelaspec{
+	border:1px solid black;
+	border-spacing:0px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+/*vertical-align: serve para alinhar o texto top cima bottom baixo emiddle para centralizar no centro do bloco */
+table#tabelaspec td{
+	border:1px solid black;
+	padding:10px;
+	text-align:center;
+	vertical-align:middle;
+}
+/*id="" pode ser usado apenas para um objeto class=""pode ser usado para varios objetos selecionados*/
+
+table#tabelaspec td.ce{
+	background-color:#606060;
+	color:white;
+	text-align:right;
+	vertical-align:top;
+}
+table#tabelaspec td.cd{
+	background-color:#cecece;
+	text-align:left;
+	color:black;
+}
+table#tabelaspec caption{
+	color:#888888;
+	font-size:15pt;
+	font-weight:bolder;
+	
+}
+table#tabelaspec caption span{
+	color:black;
+	display:block;
+	float:right;
+	font-size:7pt;
+	margin-top:12px;
+}
+
+aside#lateral{
+	display:block;
+	width:350px;
+	float:right;
+	padding:10px;
+	border-bottom:1px solid black;
+	background-color:#dddddd;
+	margin-top:7px;
+	box-shadow:2px 2px 2px rgba(0,0,0,.5);
+}
+aside#lateral h1{
+	font-family:'fontelogo',sans-serif;
+	font-size:22pt;
+	color:#888888;
+	text-shadow:2px 2px 2px black;
+	padding:5px 0px 5px 0px ;
+	margin:0px;
+	text-align:center;
+}
+aside#lateral h2{
+	font-family:arial,sans-serif;
+	color:#808080;
+	font-size:12pt;
+	background-color:#606060;
+	padding:8px;
+	text-align:center;
+	color:white;
+}
+
+/*clear:both; serve rodape descer para final da pagina*/
+footer#rodape{
+	clear:both;
+	border-top:1px solid black;
+	
+}
+/*text-align alinhar texto*/
+footer#rodape p{
+	text-align:center;
+	color:#606060;
+}
+video#filme2{
+	width:355px;
+	margin:0px;
+	
+}
